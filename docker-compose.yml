@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+ 
+
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  clinic-mq:
+    image: rabbitmq:management
+    container_name: clinic.RabbitMq
+    hostname: clinic-mq
+    ports:
+      - 15672:15672
+      - 5672:5672
+    volumes:
+        - ~/.container/queue/data/:/var/lib/clinicrabbitmq/
+        - ~/.container/queue/log/:/var/log/clinicrabbitmq
+    environment:
+        RABBITMQ_DEFAULT_USER: guest
+        RABBITMQ_DEFAULT_PASS: guest  
+ 
+volumes:
+    my-volume2:
