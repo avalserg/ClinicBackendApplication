@@ -37,6 +37,8 @@ Application for manage Clinic by using modern approaches of development on the A
 
 ### Application
 
+![_240624220202](https://github.com/user-attachments/assets/0773e248-52b4-4faf-9298-db39e4e6bbf5)
+
 #### AuthorizationMicroservice
 
 - Authorization.Api - Common middlewares and api services configuration
